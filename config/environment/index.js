@@ -2,6 +2,7 @@
 
 var path = require('path');
 var _ = require('lodash');
+var oAuth = require('../oAuth.temp');
 
 function requiredProcessEnv(name) {
   if (!process.env[name]) {
@@ -30,11 +31,11 @@ var all = {
   },
 
 //set this up later for oauth
-//   facebook: {
-//     clientID:     process.env.FACEBOOK_ID || 'id',
-//     clientSecret: process.env.FACEBOOK_SECRET || 'secret',
-//     callbackURL:  (process.env.DOMAIN || '') + '/auth/facebook/callback'
-//   },
+  facebook: {
+    clientID:     process.env.FACEBOOK_ID || oAuth.FACEBOOK_ID || 'id',
+    clientSecret: process.env.FACEBOOK_SECRET || oAuth.FACEBOOK_SECRET || 'secret',
+    callbackURL:  (process.env.DOMAIN || '') + '/auth/facebook/callback'
+  },
 
 //   twitter: {
 //     clientID:     process.env.TWITTER_ID || 'id',
