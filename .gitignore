@@ -3,3 +3,5 @@ node_modules
 .idea
 /server/config/local.env.js
 npm-debug.log
+.ntvs_analysis.dat
+FLiCK.njsproj
